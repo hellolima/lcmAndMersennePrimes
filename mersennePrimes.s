@@ -54,7 +54,7 @@ geramersenne:
                     not_prime:
                         addi sp, sp, 4                # Aloca espaço para salvar temporariamente valores
                         addi t2, t2, 1                # Incrementa p para o próximo número de Mersenne
-                        sw t2, 16(sp)                 # Guarda o valor de t2 (p) na pilha
+                    
                         lw a0, 0(sp)                  # Restaura o valor original de a0 (quantidade desejada de números de Mersenne)
 
                         addi sp, sp, -4               # Ajusta a pilha antes de continuar
