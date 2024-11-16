@@ -10,7 +10,7 @@ primosMersenneVetor: .word 0 0 0 0 0 0 0 0 #conseguimos armazenar até o oitavo 
             add s0, zero, zero
             addi a0, zero, 15#la a0, 4 
             jal ra, eprimo
-            addi t0, zero, 1
+            addi t0, zero, 0
             bne a0,t0,teste2
             addi s0,s0,1
     teste2: addi a0, zero, 2
