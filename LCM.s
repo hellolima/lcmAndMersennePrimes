@@ -1,10 +1,8 @@
 .data
-##### R1 START MODIFIQUE AQUI START #####
-#
+
 # Este espaço é para você definir as suas constantes e vetores auxiliares.
 #
 vetor: .word 1 2 3 4 5 6 7 8 9 10
-##### R1 END MODIFIQUE AQUI END #####
 
 .text
         	add s0, zero, zero     
@@ -22,8 +20,7 @@ vetor: .word 1 2 3 4 5 6 7 8 9 10
         	bne a0,t0, FIM   	 
         	addi s0,s0,1   	 
         	beq zero,zero,FIM    
-   	 
-	##### R2 START MODIFIQUE AQUI START #####
+
 	mmc:     # calculei utilizando o mdc
    		addi s3, a0, 0  	# s3 vai receber a
         addi s4, a1, 0   	 # s4 vai receber b
@@ -42,5 +39,4 @@ vetor: .word 1 2 3 4 5 6 7 8 9 10
          	div x10, s7, a0
          	jalr zero, 0(ra)
     
-	##### R2 END MODIFIQUE AQUI END #####
 	FIM: addi t0, s0, 0

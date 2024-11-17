@@ -1,11 +1,7 @@
 .data
-##### R1 START MODIFIQUE AQUI START #####
-#
-# Este espaço é para você definir as suas constantes e vetores auxiliares.
-#
+
 primosMersenneVetor: .word 0 0 0 0 0 0 0 0 #conseguimos armazenar até o oitavo número primo de Mersenne
 
-##### R1 END MODIFIQUE AQUI END #####
 .text
             add s0, zero, zero
             addi a0, zero, 2 
@@ -19,11 +15,6 @@ primosMersenneVetor: .word 0 0 0 0 0 0 0 0 #conseguimos armazenar até o oitavo 
             bne a0,t0, FIM
             addi s0,s0,1
             beq zero,zero, FIM
-
-
-##### R2 START MODIFIQUE AQUI START #####
-# Esse espaço é para você escrever o código dos procedimentos.
-# Por enquanto eles estão vazios
 
 geramersenne:
                 addi sp, sp, -20               	
@@ -64,7 +55,6 @@ geramersenne:
                 lw t2, 0(sp)
                 addi sp, sp, 20                	
                 jalr zero, 0(ra)                        	
-
                
 eprimo: 
 				addi sp, sp, -16                   
@@ -136,7 +126,4 @@ primosmersenne:
             
             jalr zero, 0(ra)
 
-               
-
-##### R2 END MODIFIQUE AQUI END #####
 FIM: add t0, zero, s0
